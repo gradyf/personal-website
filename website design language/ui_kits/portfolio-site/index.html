@@ -1,0 +1,59 @@
+<!-- @dsCard group="Portfolio Site" viewport="1240x980" name="grayforrester.com" subtitle="Interactive click-through — home, case study, about, CV, blog, contact" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>grayforrester.com — UI kit</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+html,body{margin:0;background:var(--bg-page);font-family:var(--font-sans);color:var(--ink)}
+</style>
+<script crossorigin="anonymous" src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin="anonymous" src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script crossorigin="anonymous" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../ds-loader.js"></script>
+<script src="../../image-slot.js"></script>
+</head>
+<body>
+<div id="root"><div style="padding:24px 40px;font-family:'Red Hat Mono',ui-monospace,monospace;font-weight:500;font-size:11px;letter-spacing:2px;color:#8A8578">LOADING THE LEDGER —</div></div>
+<script>
+(function () {
+  function start() {
+    window.__gfLoadDS("../../").then(function (NS) {
+      var h = React.createElement;
+      function App() {
+        var vs = React.useState("index"); var view = vs[0], setView = vs[1];
+        var ps = React.useState(null); var projectId = ps[0], setProjectId = ps[1];
+        function openProject(id) { setProjectId(id); setView("project"); window.scrollTo(0, 0); }
+        function nav(key) { setView(key); setProjectId(null); window.scrollTo(0, 0); }
+        var screen = null;
+        if (view === "index") screen = h(NS.Home, { onOpen: openProject, onNav: nav });
+        else if (view === "project") screen = h(NS.CaseStudy, { id: projectId || "q-learner", onOpen: openProject, onBack: function () { nav("index"); } });
+        else if (view === "about") screen = h(NS.About, { onNav: nav });
+        else if (view === "cv") screen = h(NS.Resume, { onNav: nav });
+        else if (view === "blog") screen = h(NS.Blog, { onNav: nav });
+        else if (view === "contact") screen = h(NS.Contact, { onNav: nav });
+        return h("div", { style: { minHeight: "100vh", display: "flex", flexDirection: "column" }, "data-screen-label": "Portfolio — " + view },
+          h(NS.Ticker, null),
+          h("div", { style: { width: "100%", maxWidth: "var(--page-max)", margin: "0 auto", padding: "0 var(--page-pad)", boxSizing: "border-box", flex: 1 } },
+            h(NS.SiteHeader, { active: view === "project" ? "index" : view, onNav: nav }),
+            screen
+          ),
+          h("div", { style: { width: "100%", maxWidth: "var(--page-max)", margin: "0 auto", padding: "0 var(--page-pad)", boxSizing: "border-box" } },
+            h(NS.SiteFooter, { onRight: function () { nav("contact"); } }),
+            h("div", { style: { height: 10 } })
+          )
+        );
+      }
+      ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+    }).catch(function (e) {
+      document.getElementById("root").innerHTML =
+        '<div style="padding:24px;font-family:monospace;font-size:12px">Could not load components: ' + (e && e.message) + "</div>";
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
+})();
+</script>
+</body>
+</html>

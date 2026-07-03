@@ -1,0 +1,23 @@
+/* Gray Forrester — motion tokens.
+   Subtle only: hovers, quiet reveals, one slow ticker.
+   No parallax, no scroll-jacking, no bounces. */
+:root {
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1); /* @kind other */
+  --speed-fast: 0.15s; /* @kind other */ /* link color flips */
+  --speed: 0.18s; /* @kind other */ /* row/tile hover */
+  --speed-slow: 0.7s; /* @kind other */ /* entrance rise */
+  --ticker-duration: 46s; /* @kind other */ /* full marquee loop; slower = calmer */
+}
+
+/* Marquee: pair with two identical nowrap spans inside a flex row. */
+@keyframes gf-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Entrance rise: use `animation: gf-rise var(--speed-slow) var(--ease-out) backwards`
+   with 0.1-0.15s stagger between siblings. Use sparingly — index page only. */
+@keyframes gf-rise {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

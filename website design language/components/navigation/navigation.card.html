@@ -1,0 +1,30 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Navigation" subtitle="Ticker · SiteHeader · SiteFooter" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--bg-page);font-family:var(--font-sans);color:var(--ink)}</style>
+<script crossorigin="anonymous" src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin="anonymous" src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script crossorigin="anonymous" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../ds-loader.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script>
+window.__gfLoadDS("../../").then(function (NS) {
+  var h = React.createElement;
+  var card = h("div", null,
+    h(NS.Ticker, null),
+    h("div", { style: { padding: "0 18px" } }, h(NS.SiteHeader, { active: "index" })),
+    h("div", { style: { padding: "28px 18px 18px", display: "flex", flexDirection: "column", gap: 24 } },
+      h(NS.Ticker, { tone: "blue", duration: 30, text: "BLUE CHROME VARIANT — SPECIAL MOMENTS ONLY" }),
+      h(NS.SiteFooter, { onRight: function () {} })
+    )
+  );
+  ReactDOM.createRoot(document.getElementById("root")).render(card);
+});
+</script>
+</body>
+</html>

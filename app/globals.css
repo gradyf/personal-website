@@ -1,0 +1,152 @@
+/* grayforrester.com — global styles.
+   Tokens ported 1:1 from the design system ("The Ledger with Specimens").
+   Fonts are self-hosted via next/font; --font-archivo / --font-work-sans /
+   --font-red-hat-mono are injected on <html> by app/layout.tsx. */
+
+:root {
+  /* ---- color tokens ---- */
+  --paper: #F5F1E6;        /* page ground */
+  --paper-raised: #FCFAF3; /* hover rows, raised panels */
+  --paper-tile: #FAF7EE;   /* specimen tile fill */
+  --paper-tint: #F2EFE4;   /* recessed / solid tile */
+
+  --ink: #16150F;          /* warm near-black, all primary text */
+  --ink-meta: #8A8578;     /* warm gray, metadata only */
+
+  --blue: #1D2FE3;         /* the one accent. links, active, hover flips */
+
+  --line-strong: #16150F;
+  --line: rgba(22, 21, 15, 0.25);
+  --line-faint: rgba(22, 21, 15, 0.16);
+  --line-blue: rgba(29, 47, 227, 0.4);
+
+  --bg-page: var(--paper);
+  --bg-hover: var(--paper-raised);
+  --bg-invert: var(--ink);
+  --text-color-body: var(--ink);
+  --text-color-meta: var(--ink-meta);
+  --text-accent: var(--blue);
+  --text-on-invert: var(--paper);
+  --border-rule: 1px solid var(--line-strong);
+  --border-hairline: 1px solid var(--line);
+
+  /* specimen patterns (abstract placeholders for project imagery) */
+  --pattern-grid: repeating-linear-gradient(0deg, rgba(22,21,15,.16) 0 1px, transparent 1px 14px),
+                  repeating-linear-gradient(90deg, rgba(22,21,15,.16) 0 1px, transparent 1px 14px);
+  --pattern-lines: repeating-linear-gradient(0deg, rgba(22,21,15,.18) 0 1px, transparent 1px 9px);
+  --pattern-rings: repeating-radial-gradient(circle at 50% 50%, rgba(22,21,15,.18) 0 1px, transparent 1px 11px);
+  --pattern-dots: radial-gradient(rgba(22,21,15,.24) 1.2px, transparent 1.2px);
+  --pattern-dots-size: 16px 16px;
+
+  /* ---- type tokens ---- */
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-text: var(--font-work-sans), system-ui, sans-serif;
+  --font-mono: var(--font-red-hat-mono), ui-monospace, 'SFMono-Regular', monospace;
+
+  --text-hero: 46px;
+  --text-h2: 29px;
+  --text-h3: 20px;
+  --text-body: 15px;
+  --text-nav: 13px;
+  --text-meta: 11px;
+  --text-micro: 10px;
+
+  --ls-display: -1px;
+  --ls-title: -0.4px;
+  --ls-meta: 1px;
+  --ls-wide: 2px;
+
+  --lh-display: 1.06;
+  --lh-body: 1.6;
+  --lh-solid: 1;
+
+  --w-hero: 800;
+  --w-title: 700;
+  --w-sub: 600;
+  --w-body: 400;
+  --w-light: 300;
+  --w-meta: 500;
+
+  /* ---- spacing / layout / shape ---- */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 20px;
+  --sp-6: 24px; --sp-7: 32px; --sp-8: 40px; --sp-9: 52px; --sp-10: 64px;
+
+  --page-pad: 40px;
+  --page-max: 1240px;
+  --row-pad: 18px;
+  --thumb-w: 136px;
+  --thumb-h: 86px;
+
+  --radius: 0px;
+  --shadow: none;
+  --shadow-poster: 10px 10px 0 var(--ink);
+
+  /* ---- motion tokens ---- */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --speed-fast: 0.15s;
+  --speed: 0.18s;
+  --speed-slow: 0.7s;
+  --ticker-duration: 46s;
+}
+
+@keyframes gf-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes gf-rise {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-page);
+  color: var(--ink);
+  font-family: var(--font-text);
+}
+
+/* staggered entrance — index page ledger only */
+.gf-rise {
+  animation: gf-rise var(--speed-slow) var(--ease-out) backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gf-rise { animation: none; }
+  .gf-marquee-track { animation: none !important; }
+}
+
+/* ---- responsive layer ----
+   The system is desktop-first (1240px column). These overrides keep the
+   hairline architecture intact on small screens; !important is needed to
+   beat the components' inline styles. */
+@media (max-width: 720px) {
+  :root {
+    --page-pad: 20px;
+    --text-hero: 33px;
+    --text-h2: 21px;
+    --row-pad: 14px;
+  }
+
+  .gf-hero { flex-direction: column !important; gap: 20px !important; padding: 36px 0 32px !important; }
+  .gf-hero-notes { text-align: left !important; }
+
+  .gf-ledger-row { grid-template-columns: 34px 1fr 28px !important; gap: 12px !important; }
+  .gf-ledger-thumb, .gf-ledger-year { display: none !important; }
+
+  .gf-case-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+
+  .gf-header { flex-wrap: wrap !important; row-gap: 10px !important; padding: 16px 0 !important; }
+  .gf-header-links { gap: 16px !important; flex-wrap: wrap !important; }
+
+  .gf-split { flex-direction: column !important; gap: 20px !important; }
+  .gf-split-right { text-align: left !important; }
+
+  .gf-cv-row { grid-template-columns: 90px 1fr !important; }
+  .gf-cv-row-right { grid-column: 2; text-align: left !important; }
+
+  .gf-biglink { font-size: 19px !important; }
+}

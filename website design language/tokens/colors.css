@@ -1,0 +1,43 @@
+/* Gray Forrester — color tokens.
+   One paper, one ink, one electric blue. Nothing else. */
+:root {
+  /* base — paper */
+  --paper: #F5F1E6;        /* page ground */
+  --paper-raised: #FCFAF3; /* hover rows, raised panels */
+  --paper-tile: #FAF7EE;   /* specimen tile fill */
+  --paper-tint: #F2EFE4;   /* recessed / solid tile */
+
+  /* base — ink */
+  --ink: #16150F;          /* warm near-black, all primary text */
+  --ink-meta: #8A8578;     /* warm gray, metadata only */
+
+  /* base — accent */
+  --blue: #1D2FE3;         /* the one accent. links, active, hover flips */
+
+  /* lines (hairline system) */
+  --line-strong: #16150F;             /* section rules, table ends */
+  --line: rgba(22, 21, 15, 0.25);     /* row dividers, tile borders */
+  --line-faint: rgba(22, 21, 15, 0.16);/* in-pattern strokes */
+  --line-blue: rgba(29, 47, 227, 0.4); /* dividers on blue-chrome surfaces */
+
+  /* semantic aliases */
+  --bg-page: var(--paper);
+  --bg-hover: var(--paper-raised);
+  --bg-invert: var(--ink);
+  --text-color-body: var(--ink);   /* renamed: --text-body is the font-size token */
+  --text-color-meta: var(--ink-meta); /* renamed: --text-meta is the font-size token */
+  --text-accent: var(--blue);
+  --text-on-invert: var(--paper);
+  --border-rule: 1px solid var(--line-strong);
+  --border-hairline: 1px solid var(--line);
+
+  /* specimen patterns (abstract placeholders for project imagery)
+     Use on --paper-tile with a --border-hairline. Sized for ~86-120px tiles;
+     scale the px stops up ~2x for tiles taller than 200px. */
+  --pattern-grid: repeating-linear-gradient(0deg, rgba(22,21,15,.16) 0 1px, transparent 1px 14px),
+                  repeating-linear-gradient(90deg, rgba(22,21,15,.16) 0 1px, transparent 1px 14px); /* @kind other */
+  --pattern-lines: repeating-linear-gradient(0deg, rgba(22,21,15,.18) 0 1px, transparent 1px 9px); /* @kind other */
+  --pattern-rings: repeating-radial-gradient(circle at 50% 50%, rgba(22,21,15,.18) 0 1px, transparent 1px 11px); /* @kind other */
+  --pattern-dots: radial-gradient(rgba(22,21,15,.24) 1.2px, transparent 1.2px); /* @kind other */
+  --pattern-dots-size: 16px 16px; /* @kind other */
+}

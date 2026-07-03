@@ -1,0 +1,30 @@
+/* Gray Forrester — spacing, layout, shape. */
+:root {
+  /* spacing ramp */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+  --sp-9: 52px;
+  --sp-10: 64px;
+
+  /* page geometry */
+  --page-pad: 40px;      /* horizontal gutter inside the frame */
+  --page-max: 1240px;    /* desktop content width */
+  --row-pad: 18px;       /* ledger row vertical padding */
+  --thumb-w: 136px;      /* specimen column width in ledger rows */
+  --thumb-h: 86px;
+
+  /* shape — THE RULE: no rounded corners. Ever. */
+  --radius: 0px;
+
+  /* shadows — none. The system is flat; depth comes from hairlines
+     and paper tones. (If a future poster element needs lift, the only
+     allowed shadow is a hard offset block: 10px 10px 0 var(--ink).) */
+  --shadow: none;
+  --shadow-poster: 10px 10px 0 var(--ink);
+}

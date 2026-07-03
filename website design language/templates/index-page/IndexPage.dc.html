@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Index page" description="Ledger index scaffold — ticker, header, hero, section strip, ledger rows, footer" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div data-screen-label="Index page" style="min-height: 100vh; background: var(--paper); color: var(--ink); font-family: var(--font-sans); display: flex; flex-direction: column">
+
+  <x-import component-from-global-scope="GrayForresterDesignSystem_11c4d1.Ticker" text="GRAY FORRESTER — PORTFOLIO OF IDEAS, PROJECTS &amp; OTHER EVIDENCE — EST. 2026" hint-size="100%,34px"></x-import>
+
+  <div style="width: 100%; max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-pad); box-sizing: border-box; flex: 1">
+
+    <nav style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line)">
+      <a href="#" style="font-family: var(--font-sans); font-weight: 800; font-size: 18px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--ink); text-decoration: none">Gray Forrester</a>
+      <div style="display: flex; gap: 28px; font-family: var(--font-mono); font-size: var(--text-nav)">
+        <a href="#" style="color: var(--blue); text-decoration: underline; text-underline-offset: 3px" style-hover="color: var(--blue)">Index.</a>
+        <a href="#" style="color: var(--ink); text-decoration: none" style-hover="color: var(--blue)">About.</a>
+        <a href="#" style="color: var(--ink); text-decoration: none" style-hover="color: var(--blue)">CV.</a>
+        <a href="#" style="color: var(--ink); text-decoration: none" style-hover="color: var(--blue)">Blog.</a>
+        <a href="#" style="color: var(--ink); text-decoration: none" style-hover="color: var(--blue)">Contact.</a>
+      </div>
+    </nav>
+
+    <header style="display: flex; justify-content: space-between; gap: 60px; padding: 52px 0 44px">
+      <div>
+        <h1 style="margin: 0; font-size: var(--text-hero); font-weight: 800; line-height: var(--lh-display); letter-spacing: var(--ls-display); max-width: 720px">Projects, concepts &amp; <span style="color: var(--blue)">other evidence.</span></h1>
+        <p style="margin: 22px 0 0; max-width: 540px; font-family: var(--font-text); font-size: var(--text-body); line-height: var(--lh-body)">Agents that learn, controllers that settle, small tools for large rabbit holes. Built at school and after hours with Claude Code.</p>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 11.5px; line-height: 1.8; text-align: right; flex: none">
+        <div>(PORTFOLIO, V1)</div>
+        <div>(LIGHT ONLY)</div>
+      </div>
+    </header>
+
+    <div style="border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); padding: 9px 2px; display: flex; justify-content: space-between; align-items: baseline; gap: 24px; font-family: var(--font-mono); font-weight: var(--w-meta); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-meta)">
+      <span>Selected work</span>
+      <span>03 entries — 2024 → now</span>
+    </div>
+
+    <a href="#" style="display: grid; grid-template-columns: 52px 136px 1fr 70px 36px; align-items: center; gap: 20px; padding: var(--row-pad) 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: background var(--speed) var(--ease-out)" style-hover="background: var(--paper-raised)">
+      <span style="font-family: var(--font-mono); font-weight: var(--w-meta); font-size: 13px; color: var(--blue)">01</span>
+      <span style="height: var(--thumb-h); border: 1px solid var(--line); background-color: var(--paper-tile); background-image: var(--pattern-grid)"></span>
+      <span style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-size: var(--text-h2); font-weight: 700; letter-spacing: var(--ls-title)">Q-Learner</span>
+        <span style="font-family: var(--font-mono); font-weight: var(--w-meta); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-meta)">Reinforcement learning · Python</span>
+      </span>
+      <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-meta)">2025</span>
+      <span style="font-size: 20px; text-align: right">→</span>
+    </a>
+
+    <a href="#" style="display: grid; grid-template-columns: 52px 136px 1fr 70px 36px; align-items: center; gap: 20px; padding: var(--row-pad) 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: background var(--speed) var(--ease-out)" style-hover="background: var(--paper-raised)">
+      <span style="font-family: var(--font-mono); font-weight: var(--w-meta); font-size: 13px; color: var(--blue)">02</span>
+      <span style="height: var(--thumb-h); border: 1px solid var(--line); background-color: var(--paper-tile); background-image: var(--pattern-lines)"></span>
+      <span style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-size: var(--text-h2); font-weight: 700; letter-spacing: var(--ls-title)">PID Control</span>
+        <span style="font-family: var(--font-mono); font-weight: var(--w-meta); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-meta)">Simulated robotics · Control loops</span>
+      </span>
+      <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-meta)">2025</span>
+      <span style="font-size: 20px; text-align: right">→</span>
+    </a>
+
+    <a href="#" style="display: grid; grid-template-columns: 52px 136px 1fr 70px 36px; align-items: center; gap: 20px; padding: var(--row-pad) 4px; border-bottom: 1px solid var(--line-strong); text-decoration: none; color: var(--ink); transition: background var(--speed) var(--ease-out)" style-hover="background: var(--paper-raised)">
+      <span style="font-family: var(--font-mono); font-weight: var(--w-meta); font-size: 13px; color: var(--blue)">03</span>
+      <span style="height: var(--thumb-h); border: 1px solid var(--line); background-color: var(--paper-tile); background-image: var(--pattern-rings)"></span>
+      <span style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-size: var(--text-h2); font-weight: 700; letter-spacing: var(--ls-title)">CD Cataloger</span>
+        <span style="font-family: var(--font-mono); font-weight: var(--w-meta); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-meta)">Music explorer · Metadata</span>
+      </span>
+      <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-meta)">2026</span>
+      <span style="font-size: 20px; text-align: right">→</span>
+    </a>
+
+    <div style="display: flex; justify-content: space-between; gap: 60px; padding: 36px 0 44px">
+      <div style="font-family: var(--font-mono); font-weight: var(--w-meta); font-size: 12px; line-height: 2">ELSEWHERE: <a href="#" style="color: var(--blue)">GitHub ↗</a> · <a href="#" style="color: var(--blue)">LinkedIn ↗</a> · <a href="#" style="color: var(--blue)">hello@grayforrester.com</a></div>
+      <p style="margin: 0; max-width: 400px; font-family: var(--font-text); font-size: 13.5px; line-height: 1.6; color: var(--ink-meta); text-align: right">The blog opens when there's something worth reading. Soon-ish.</p>
+    </div>
+
+  </div>
+
+  <div style="width: 100%; max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-pad) 10px; box-sizing: border-box">
+    <div style="border-top: 1px solid var(--line-strong); padding: 10px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 24px; font-family: var(--font-mono); font-weight: var(--w-meta); font-size: 11px; letter-spacing: 1px; text-transform: uppercase">
+      <span>© 2026 Gray Forrester</span>
+      <a href="#" style="color: var(--ink); text-decoration: none" style-hover="color: var(--blue); text-decoration: underline">Drop me a line</a>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

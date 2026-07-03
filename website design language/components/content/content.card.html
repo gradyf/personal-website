@@ -1,0 +1,38 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Content" subtitle="PageHero · LedgerRow · PostRow" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--bg-page);font-family:var(--font-sans);color:var(--ink)}</style>
+<script crossorigin="anonymous" src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin="anonymous" src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script crossorigin="anonymous" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../ds-loader.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script>
+window.__gfLoadDS("../../").then(function (NS) {
+  var h = React.createElement;
+  var card = h("div", { style: { padding: "0 18px 16px" } },
+    h("div", { style: { transform: "scale(.72)", transformOrigin: "top left", width: "139%" } },
+      h(NS.PageHero, {
+        title: "Projects, concepts &", accent: "other evidence.",
+        lede: "Agents that learn, controllers that settle, small tools for large rabbit holes.",
+        notes: ["PORTFOLIO, V1", "LIGHT ONLY"]
+      })
+    ),
+    h("div", { style: { borderTop: "1px solid var(--line-strong)", marginTop: -20 } },
+      h(NS.LedgerRow, { index: "01", title: "Q-Learner", meta: "REINFORCEMENT LEARNING · PYTHON", year: "2025", pattern: "grid" }),
+      h(NS.LedgerRow, { index: "02", title: "PID Control", meta: "SIMULATED ROBOTICS · CONTROL LOOPS", year: "2025", pattern: "lines", last: true })
+    ),
+    h("div", { style: { borderTop: "1px solid var(--line-strong)", marginTop: 18 } },
+      h(NS.PostRow, { date: "JUL 2026", title: "On tuning a stubborn setpoint", readTime: "4 MIN", last: true })
+    )
+  );
+  ReactDOM.createRoot(document.getElementById("root")).render(card);
+});
+</script>
+</body>
+</html>

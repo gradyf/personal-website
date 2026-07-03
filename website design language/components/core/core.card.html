@@ -1,0 +1,40 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Core" subtitle="Button · Tag · SectionStrip · Specimen" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--bg-page);font-family:var(--font-sans);color:var(--ink)}</style>
+<script crossorigin="anonymous" src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin="anonymous" src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script crossorigin="anonymous" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../ds-loader.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script>
+window.__gfLoadDS("../../").then(function (NS) {
+  var h = React.createElement;
+  var row = { display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" };
+  var card = h("div", { style: { padding: "16px 18px", display: "flex", flexDirection: "column", gap: 16 } },
+    h("div", { style: row },
+      h(NS.Button, null, "See it now"),
+      h(NS.Button, { variant: "outline" }, "Download CV"),
+      h(NS.Button, { variant: "blue" }, "Drop me a line"),
+      h(NS.Button, { size: "sm" }, "Filter")
+    ),
+    h("div", { style: { display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" } },
+      h(NS.Tag, { active: true }, "All"), h(NS.Tag, null, "RL"), h(NS.Tag, null, "Robotics"),
+      h(NS.Tag, null, "Mobile"), h(NS.Tag, null, "Music"), h(NS.Tag, null, "Web")
+    ),
+    h(NS.SectionStrip, { left: "SELECTED WORK", right: "2024 → NOW" }),
+    h("div", { style: { display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 10 } },
+      h(NS.Specimen, { pattern: "grid" }), h(NS.Specimen, { pattern: "lines" }), h(NS.Specimen, { pattern: "solid" }),
+      h(NS.Specimen, { pattern: "rings" }), h(NS.Specimen, { pattern: "dots" })
+    )
+  );
+  ReactDOM.createRoot(document.getElementById("root")).render(card);
+});
+</script>
+</body>
+</html>

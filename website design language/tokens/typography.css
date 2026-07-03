@@ -1,0 +1,39 @@
+/* Gray Forrester — type tokens.
+   Three families, three registers:
+   Archivo (sans)      = display voice. Hero, titles, sub-heads, wordmark, buttons.
+   Work Sans (text)    = body prose.
+   Red Hat Mono (mono) = apparatus. Nav, metadata, tickers, captions, numbers.
+   Apparatus caps (meta/micro/index numbers) sit at weight 500 (--w-meta). */
+:root {
+  --font-sans: 'Archivo', system-ui, sans-serif;
+  --font-text: 'Work Sans', system-ui, sans-serif;
+  --font-mono: 'Red Hat Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* scale */
+  --text-hero: 46px;   /* w800, lh 1.06, ls -1px */
+  --text-h2: 29px;     /* ledger titles. w700, ls -0.4px */
+  --text-h3: 20px;     /* post rows, sub-heads. w600 */
+  --text-body: 15px;   /* w400, lh 1.6, max-width 540px */
+  --text-nav: 13px;    /* mono, w400 */
+  --text-meta: 11px;   /* mono, uppercase, ls 1px */
+  --text-micro: 10px;  /* mono, uppercase, ls 2px */
+
+  /* letter-spacing */
+  --ls-display: -1px;
+  --ls-title: -0.4px;
+  --ls-meta: 1px;
+  --ls-wide: 2px;
+
+  /* line-height */
+  --lh-display: 1.06; /* @kind font */
+  --lh-body: 1.6; /* @kind font */
+  --lh-solid: 1; /* @kind font */
+
+  /* weights (Archivo) */
+  --w-hero: 800; /* @kind font */
+  --w-title: 700; /* @kind font */
+  --w-sub: 600; /* @kind font */
+  --w-body: 400; /* @kind font */
+  --w-light: 300; /* @kind font */ /* oversized numerals only */
+  --w-meta: 500; /* @kind font */ /* mono caps: meta, micro, index numbers */
+}
