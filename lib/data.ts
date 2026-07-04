@@ -1,10 +1,9 @@
-// Site config + seed project data for grayforrester.com.
-// Years, stacks and links are PLACEHOLDERS — confirm before shipping widely.
+// Site config + project data for grayforrester.com.
 
 export const SITE = {
   name: "Gray Forrester",
   domain: "https://grayforrester.com",
-  // Placeholder inbox — needs forwarding set up on the domain, or point at the real inbox.
+  // Porkbun forwards hello@ to the real inbox.
   email: "hello@grayforrester.com",
   // Fill in real profile URLs.
   github: "",
@@ -14,20 +13,6 @@ export const SITE = {
   footerLeft: "© 2026 GRAY FORRESTER",
 };
 
-export type Category = {
-  key: string;
-  label: string;
-};
-
-export const CATS: Category[] = [
-  { key: "all", label: "All" },
-  { key: "rl", label: "RL" },
-  { key: "robotics", label: "Robotics" },
-  { key: "mobile", label: "Mobile" },
-  { key: "music", label: "Music" },
-  { key: "web", label: "Web" },
-];
-
 export type Project = {
   id: string;
   index: string;
@@ -35,13 +20,15 @@ export type Project = {
   meta: string;
   year: string;
   pattern: "grid" | "lines" | "rings" | "dots" | "solid";
-  cat: string;
+  section: "school" | "play";
   origin: "SCHOOL" | "PERSONAL";
   facts: string[];
   body: string[];
+  /** Live deployment — play projects link out. */
+  url?: string;
   /** Optional real screenshot, e.g. "/shots/q-learner.png" in /public. */
   src?: string;
-  /** Optional source link for PERSONAL projects. */
+  /** Optional public source link. */
   source?: string;
 };
 
@@ -53,7 +40,7 @@ export const PROJECTS: Project[] = [
     meta: "REINFORCEMENT LEARNING · PYTHON",
     year: "2025",
     pattern: "grid",
-    cat: "rl",
+    section: "school",
     origin: "SCHOOL",
     facts: ["PYTHON + NUMPY", "ε-GREEDY POLICY", "REWARD SHAPING", "VALUE HEATMAP"],
     body: [
@@ -68,7 +55,7 @@ export const PROJECTS: Project[] = [
     meta: "SIMULATED ROBOTICS · CONTROL LOOPS",
     year: "2025",
     pattern: "lines",
-    cat: "robotics",
+    section: "school",
     origin: "SCHOOL",
     facts: ["SIMULATED ROBOTICS", "KP · KI · KD", "STEP RESPONSE", "TELEMETRY PLOTS"],
     body: [
@@ -83,7 +70,7 @@ export const PROJECTS: Project[] = [
     meta: "ANDROID · KOTLIN",
     year: "2024",
     pattern: "solid",
-    cat: "mobile",
+    section: "school",
     origin: "SCHOOL",
     facts: ["ANDROID STUDIO", "KOTLIN", "LISTS + STATE", "REAL UX DECISIONS"],
     body: [
@@ -92,36 +79,51 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: "cd-cataloger",
+    id: "crate-digger",
     index: "04",
-    title: "CD Cataloger",
-    meta: "MUSIC EXPLORER · METADATA",
+    title: "Crate Digger",
+    meta: "CD CATALOGING · BARCODE SCANNER",
     year: "2026",
     pattern: "rings",
-    cat: "music",
+    section: "play",
     origin: "PERSONAL",
-    facts: ["METADATA + SEARCH", "SQLITE", "SHELF LOGIC", "CLAUDE CODE"],
+    url: "https://www.cratedigging.io",
+    facts: [
+      "NEXT.JS + TURSO",
+      "BARCODE SCANNING",
+      "CRATE-BROWSING UI",
+      "LIVE — CRATEDIGGING.IO",
+    ],
     body: [
-      "A cataloger and explorer for a physical CD collection. Rip the metadata, index the shelf, then wander the collection by year, label, or mood instead of alphabetical guilt.",
-      "Built after hours with Claude Code. The schema outlived three redesigns; the search bar is the real MVP.",
+      "A web app for cataloging a physical CD collection — point the camera at a barcode and the disc files itself. Metadata, cover art, and a shelf that finally admits what it contains.",
+      "The browsing UI is the fun part: a digital crate you riffle through with the keyboard, A→Z jumps included. Built after hours with Claude Code; live at cratedigging.io.",
     ],
   },
   {
-    id: "rabbit-hole",
+    id: "wabbit-hole",
     index: "05",
-    title: "Rabbit Hole",
-    meta: "WIKIPEDIA API · TRIVIA",
+    title: "Wabbit Hole",
+    meta: "WIKIPEDIA EXPLORER · STACKED CARDS",
     year: "2026",
     pattern: "dots",
-    cat: "web",
+    section: "play",
     origin: "PERSONAL",
-    facts: ["WIKIPEDIA API", "GRAPH HOPS", "TRIVIA MODE", "ONE MORE CLICK"],
+    url: "https://wabbithole.io",
+    facts: [
+      "WIKIPEDIA REST API",
+      "STACKED-CARD UI",
+      "CLIENT-SIDE ONLY",
+      "LIVE — WABBITHOLE.IO",
+    ],
     body: [
-      "A Wikipedia toy that turns aimless clicking into a game — follow links hop by hop, then answer trivia generated from the path you took.",
-      "The graph is the fun part: watching how fast any topic collapses toward philosophy, wars, or 19th-century chemists. Built with the Wikipedia API and restraint.",
+      "A Wikipedia reader that makes the rabbit hole the interface — articles render as stacked cards, and every link you follow deals a new card onto the pile. The stack is your browsing history, laid out where you can see it.",
+      "Client-side only: TypeScript, the Wikipedia REST API, and restraint. A trivia mode generated from the path you took is next. Live at wabbithole.io.",
     ],
   },
 ];
+
+export const SCHOOL_PROJECTS = PROJECTS.filter((p) => p.section === "school");
+export const PLAY_PROJECTS = PROJECTS.filter((p) => p.section === "play");
 
 export function getProject(id: string): Project | undefined {
   return PROJECTS.find((p) => p.id === id);

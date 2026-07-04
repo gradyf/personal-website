@@ -124,8 +124,19 @@ export default async function CaseStudy({
               <li key={k}>{f}</li>
             ))}
           </ul>
+          {p.url ? (
+            <div style={{ marginTop: 24 }}>
+              <Button variant="outline" href={p.url}>
+                Visit the live site ↗
+              </Button>
+            </div>
+          ) : null}
           <div style={{ marginTop: 24 }}>
-            {p.origin === "SCHOOL" || !p.source ? (
+            {p.source ? (
+              <Button variant="outline" href={p.source}>
+                View source ↗
+              </Button>
+            ) : (
               <div
                 style={{
                   ...metaStyle,
@@ -144,10 +155,6 @@ export default async function CaseStudy({
                   <>SOURCE — LINK COMING SOON.</>
                 )}
               </div>
-            ) : (
-              <Button variant="outline" href={p.source}>
-                View source ↗
-              </Button>
             )}
           </div>
         </div>

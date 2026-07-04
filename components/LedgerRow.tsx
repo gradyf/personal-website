@@ -12,6 +12,7 @@ export function LedgerRow({
   pattern = "grid",
   src,
   href,
+  external = false,
   last = false,
   riseDelay,
 }: {
@@ -22,15 +23,19 @@ export function LedgerRow({
   pattern?: string;
   src?: string;
   href: string;
+  /** External link — opens in a new tab and swaps the arrow for ↗. */
+  external?: boolean;
   last?: boolean;
   /** Optional gf-rise entrance stagger in seconds — index page only. */
   riseDelay?: number;
 }) {
   const [hover, setHover] = React.useState(false);
   const flip = hover ? "var(--text-accent)" : "var(--ink)";
+  const El: React.ElementType = external ? "a" : Link;
   return (
-    <Link
+    <El
       href={href}
+      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
       className={`gf-ledger-row${riseDelay !== undefined ? " gf-rise" : ""}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -102,8 +107,8 @@ export function LedgerRow({
           transition: "color var(--speed) var(--ease-out)",
         }}
       >
-        →
+        {external ? "↗" : "→"}
       </span>
-    </Link>
+    </El>
   );
 }
