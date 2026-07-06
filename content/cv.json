@@ -1,0 +1,33 @@
+{
+  "lede": "The formal version. Real dates, schools and employers go here — this page is the template.",
+  "education": [
+    {
+      "span": "2024 → NOW",
+      "title": "M.S. Computer Science — [University]",
+      "sub": "COURSEWORK: RL · ROBOTICS · MOBILE DEV",
+      "right": "[GPA]"
+    },
+    {
+      "span": "20XX → 2024",
+      "title": "B.S. — [University]",
+      "sub": "[MAJOR · HONORS]",
+      "right": ""
+    }
+  ],
+  "experience": [
+    {
+      "span": "NOW",
+      "title": "Product Owner / FDE — Deloitte, ConvergeHealth",
+      "sub": "AGENTIC PLATFORM · HEALTHCARE REVENUE CYCLE",
+      "right": "[CITY]"
+    },
+    {
+      "span": "[DATES]",
+      "title": "[Role] — [Company]",
+      "sub": "REPLACE WITH TWO REAL BULLETS, MAX",
+      "right": "[CITY]"
+    }
+  ],
+  "skills": ["Python", "NumPy", "Kotlin", "Android", "C++", "SQL", "Git", "Claude Code"],
+  "footnote": "TEMPLATE — BRACKETED FIELDS AWAIT REAL FACTS."
+}

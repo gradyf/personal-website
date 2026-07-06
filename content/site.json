@@ -1,0 +1,36 @@
+{
+  "name": "Gray Forrester",
+  "domain": "https://grayforrester.com",
+  "email": "hello@grayforrester.com",
+  "github": "",
+  "linkedin": "",
+  "ticker": "GRAY FORRESTER — PORTFOLIO OF IDEAS, PROJECTS & OTHER EVIDENCE — EST. 2026",
+  "footerLeft": "© 2026 GRAY FORRESTER",
+  "home": {
+    "heroTitle": "Projects, concepts &",
+    "heroAccent": "other evidence.",
+    "heroLede": "Agents that learn, controllers that settle, small tools for large rabbit holes. Built at work, at school, and after hours with Claude Code.",
+    "heroNotes": ["WORK · SCHOOL · PLAY", "LIGHT ONLY", "BLOG: SOON-ISH"],
+    "work": {
+      "stripRight": "DELOITTE · CONVERGEHEALTH",
+      "body": [
+        "By day I’m a product owner and forward-deployed engineer at Deloitte — ConvergeHealth, the arm that ships software into healthcare revenue cycle. I’m helping build an agentic platform there: AI agents doing real work in a domain where “mostly right” is not a feature. The job is half product judgment, half deployment plumbing — I like both halves."
+      ],
+      "micro": "AGENTIC PLATFORM · HEALTHCARE REVENUE CYCLE · HUMANS IN THE LOOP"
+    },
+    "school": {
+      "stripRight": "M.S. COMPUTER SCIENCE",
+      "lede": "Coursework that got out of hand — the theory underneath the agents: reward signals, control loops, state and search. Write-ups are public; source stays behind the honor code, shared in limited ways on request."
+    },
+    "play": {
+      "stripRight": "LIVE — BUILT WITH CLAUDE CODE",
+      "lede": "After-hours SaaS apps, built end-to-end with Claude Code and live in production."
+    },
+    "blogNote": "The blog opens when there’s something worth reading. Soon-ish."
+  },
+  "contact": {
+    "heroTitle": "Say",
+    "heroAccent": "hello.",
+    "heroLede": "One inbox, checked often. Recruiters, collaborators, and people with strong opinions about CD shelving all welcome."
+  }
+}

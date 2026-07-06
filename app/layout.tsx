@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, Work_Sans, Red_Hat_Mono } from "next/font/google";
-import { SITE } from "@/lib/data";
+import { SITE } from "@/lib/content";
 import { Ticker } from "@/components/Ticker";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";

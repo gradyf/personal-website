@@ -3,7 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { SectionStrip } from "@/components/SectionStrip";
 import { LedgerRow } from "@/components/LedgerRow";
 import { HoverLink } from "@/components/HoverLink";
-import { SITE, SCHOOL_PROJECTS, PLAY_PROJECTS } from "@/lib/data";
+import { SITE, SCHOOL_PROJECTS, PLAY_PROJECTS } from "@/lib/content";
 
 const prose: CSSProperties = {
   margin: 0,
@@ -42,38 +42,30 @@ function SectionLede({ children }: { children: React.ReactNode }) {
 }
 
 export default function Home() {
+  const { home } = SITE;
   let rise = 0;
   const nextRise = () => 0.1 + rise++ * 0.12;
   return (
     <div>
       <PageHero
-        title="Projects, concepts &"
-        accent="other evidence."
-        lede="Agents that learn, controllers that settle, small tools for large rabbit holes. Built at work, at school, and after hours with Claude Code."
-        notes={["WORK · SCHOOL · PLAY", "LIGHT ONLY", "BLOG: SOON-ISH"]}
+        title={home.heroTitle}
+        accent={home.heroAccent}
+        lede={home.heroLede}
+        notes={home.heroNotes}
       />
 
-      <SectionStrip left="WORK" right="DELOITTE · CONVERGEHEALTH" />
+      <SectionStrip left="WORK" right={home.work.stripRight} />
       <div style={{ padding: "22px 0 14px", display: "flex", flexDirection: "column", gap: 14 }}>
-        <p style={prose}>
-          By day I’m a product owner and forward-deployed engineer at Deloitte —
-          ConvergeHealth, the arm that ships software into healthcare revenue
-          cycle. I’m helping build an agentic platform there: AI agents doing
-          real work in a domain where “mostly right” is not a feature. The job
-          is half product judgment, half deployment plumbing — I like both
-          halves.
-        </p>
-        <div style={{ ...micro, paddingBottom: 26 }}>
-          AGENTIC PLATFORM · HEALTHCARE REVENUE CYCLE · HUMANS IN THE LOOP
-        </div>
+        {home.work.body.map((para, i) => (
+          <p key={i} style={prose}>
+            {para}
+          </p>
+        ))}
+        <div style={{ ...micro, paddingBottom: 26 }}>{home.work.micro}</div>
       </div>
 
-      <SectionStrip left="SCHOOL" right="M.S. COMPUTER SCIENCE" />
-      <SectionLede>
-        Coursework that got out of hand — agents, controllers, and one
-        job-hunting app. Write-ups are public; source stays behind the honor
-        code, available on request.
-      </SectionLede>
+      <SectionStrip left="SCHOOL" right={home.school.stripRight} />
+      <SectionLede>{home.school.lede}</SectionLede>
       <div style={{ paddingBottom: 34 }}>
         {SCHOOL_PROJECTS.map((p, i) => (
           <LedgerRow
@@ -91,10 +83,9 @@ export default function Home() {
         ))}
       </div>
 
-      <SectionStrip left="PLAY" right="LIVE — BUILT WITH CLAUDE CODE" />
+      <SectionStrip left="PLAY" right={home.play.stripRight} />
       <SectionLede>
-        After-hours tools, each solving a real problem in my apartment. Both
-        are live — the rows link out, the write-ups live{" "}
+        {home.play.lede} The write-ups live{" "}
         <HoverLink href={`/projects/${PLAY_PROJECTS[0].id}`} baseColor="var(--text-accent)" fontSize={13.5} style={{ fontFamily: "var(--font-text)" }}>
           here
         </HoverLink>
@@ -156,7 +147,7 @@ export default function Home() {
             textAlign: "right",
           }}
         >
-          The blog opens when there’s something worth reading. Soon-ish.
+          {home.blogNote}
         </p>
       </div>
     </div>

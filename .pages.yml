@@ -1,0 +1,277 @@
+media:
+  input: public/shots
+  output: /shots
+
+content:
+  - name: site
+    label: Site
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: name
+        type: string
+        label: Display name
+        description: Shown in the header and page titles.
+      - name: domain
+        type: string
+        label: Site domain
+        description: Full https:// URL — used for the sitemap and metadata.
+      - name: email
+        type: string
+        label: Contact email
+      - name: github
+        type: string
+        label: GitHub profile URL
+        description: Leave blank to hide the GitHub link and fall back to /contact.
+      - name: linkedin
+        type: string
+        label: LinkedIn profile URL
+        description: Leave blank to hide the LinkedIn link and fall back to /contact.
+      - name: ticker
+        type: text
+        label: Header ticker text
+        description: The scrolling marquee line under the header, in caps.
+      - name: footerLeft
+        type: string
+        label: Footer copyright line
+      - name: home
+        type: object
+        label: Home page
+        description: Content for the index page (/).
+        fields:
+          - name: heroTitle
+            type: string
+            label: Hero title
+            description: First line of the big headline, e.g. "Projects, concepts &".
+          - name: heroAccent
+            type: string
+            label: Hero accent
+            description: Second, accent-colored line of the headline.
+          - name: heroLede
+            type: text
+            label: Hero lede
+            description: One or two sentences under the headline.
+          - name: heroNotes
+            type: string
+            list: true
+            label: Hero notes
+            description: Short caps labels stacked in parentheses on the right of the hero.
+          - name: work
+            type: object
+            label: Work section
+            fields:
+              - name: stripRight
+                type: string
+                label: Section strip — right-hand label
+                description: e.g. "DELOITTE · CONVERGEHEALTH".
+              - name: body
+                type: text
+                list: true
+                label: Body paragraphs
+              - name: micro
+                type: string
+                label: Micro caption
+                description: Small caps line under the body paragraph(s).
+          - name: school
+            type: object
+            label: School section
+            fields:
+              - name: stripRight
+                type: string
+                label: Section strip — right-hand label
+                description: e.g. "M.S. COMPUTER SCIENCE".
+              - name: lede
+                type: text
+                label: Lede
+                description: Short intro line above the school project rows.
+          - name: play
+            type: object
+            label: Play section
+            fields:
+              - name: stripRight
+                type: string
+                label: Section strip — right-hand label
+                description: e.g. "LIVE — BUILT WITH CLAUDE CODE".
+              - name: lede
+                type: text
+                label: Lede
+                description: >-
+                  Short intro line above the play project rows. The page
+                  automatically appends "The write-ups live here." after it.
+          - name: blogNote
+            type: text
+            label: Blog note
+            description: Small right-aligned note at the bottom of the index page.
+      - name: contact
+        type: object
+        label: Contact page
+        fields:
+          - name: heroTitle
+            type: string
+            label: Hero title
+          - name: heroAccent
+            type: string
+            label: Hero accent
+          - name: heroLede
+            type: text
+            label: Hero lede
+
+  - name: about
+    label: About
+    type: file
+    path: content/about.json
+    format: json
+    fields:
+      - name: heroTitle
+        type: string
+        label: Hero title
+      - name: heroAccent
+        type: string
+        label: Hero accent
+      - name: heroLede
+        type: text
+        label: Hero lede
+      - name: notes
+        type: string
+        list: true
+        label: Hero notes
+        description: Short caps labels stacked in parentheses on the right of the hero.
+      - name: paragraphs
+        type: text
+        list: true
+        label: Body paragraphs
+        description: Each item renders as its own paragraph, in order.
+      - name: contactStripRight
+        type: string
+        label: Contact strip — right-hand label
+        description: e.g. "ONE INBOX, CHECKED OFTEN".
+      - name: asideNote
+        type: text
+        label: Aside note
+        description: Small note next to the contact strip, e.g. pointing to the CV.
+
+  - name: cv
+    label: CV
+    type: file
+    path: content/cv.json
+    format: json
+    fields:
+      - name: lede
+        type: text
+        label: Hero lede
+      - name: education
+        type: object
+        list: true
+        label: Education rows
+        fields:
+          - name: span
+            type: string
+            label: Date span
+            description: e.g. "2024 → NOW".
+          - name: title
+            type: string
+            label: Title
+            description: e.g. "M.S. Computer Science — [University]".
+          - name: sub
+            type: string
+            label: Subtitle
+            description: Small caps line, e.g. coursework or honors.
+          - name: right
+            type: string
+            label: Right-hand label
+            description: e.g. GPA or city.
+      - name: experience
+        type: object
+        list: true
+        label: Experience rows
+        fields:
+          - name: span
+            type: string
+            label: Date span
+          - name: title
+            type: string
+            label: Title
+            description: e.g. "Product Owner / FDE — Deloitte, ConvergeHealth".
+          - name: sub
+            type: string
+            label: Subtitle
+            description: Small caps line, e.g. focus area.
+          - name: right
+            type: string
+            label: Right-hand label
+            description: e.g. city.
+      - name: skills
+        type: string
+        list: true
+        label: Skills
+        description: Rendered as tags, in order.
+      - name: footnote
+        type: text
+        label: Footnote
+        description: Small caps line at the bottom of the page.
+
+  - name: projects
+    label: Projects
+    type: collection
+    path: content/projects
+    format: yaml-frontmatter
+    delimiters: ["---", "---"]
+    filename: "{primary}.md"
+    fields:
+      - name: title
+        type: string
+        label: Title
+      - name: index
+        type: string
+        label: Ledger index
+        description: Two-digit order, e.g. "01". Controls sort order everywhere.
+      - name: meta
+        type: string
+        label: Meta line
+        description: Small caps line under the title, e.g. "REINFORCEMENT LEARNING · PYTHON".
+      - name: year
+        type: string
+        label: Year
+      - name: pattern
+        type: select
+        label: Visual pattern
+        description: Generated pattern used when no screenshot is set.
+        options:
+          values: [grid, lines, rings, dots, solid]
+      - name: section
+        type: select
+        label: Section
+        description: Which home-page section this project's ledger row appears in.
+        options:
+          values: [school, play]
+      - name: origin
+        type: select
+        label: Origin
+        options:
+          values: [SCHOOL, PERSONAL]
+      - name: facts
+        type: string
+        list: true
+        label: Facts
+        description: Short caps bullets in the "INCLUDING" rail.
+      - name: url
+        type: string
+        label: Live URL
+        description: Optional. Play projects only — links the ledger row out and adds a "Visit the live site" button.
+      - name: src
+        type: image
+        label: Screenshot
+        description: Optional real screenshot. Falls back to the generated pattern when empty.
+      - name: source
+        type: string
+        label: Source link
+        description: Optional public source URL.
+      - name: body
+        type: rich-text
+        label: Write-up
+        description: The paragraphs on the project's own page. Separate paragraphs with a blank line.
+    view:
+      primary: title
+      fields: [index, section, year]
+      sort: [index]

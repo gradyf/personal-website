@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { HoverLink } from "@/components/HoverLink";
-import { SITE } from "@/lib/data";
+import { SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -12,9 +12,9 @@ export default function Contact() {
   return (
     <div>
       <PageHero
-        title="Say"
-        accent="hello."
-        lede="One inbox, checked often. Recruiters, collaborators, and people with strong opinions about CD shelving all welcome."
+        title={SITE.contact.heroTitle}
+        accent={SITE.contact.heroAccent}
+        lede={SITE.contact.heroLede}
       />
       <div style={{ display: "flex", flexDirection: "column", gap: 20, padding: "8px 0 56px" }}>
         <HoverLink

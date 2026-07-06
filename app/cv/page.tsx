@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { SectionStrip } from "@/components/SectionStrip";
 import { Tag } from "@/components/Tag";
+import { CV } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "CV",
@@ -59,42 +60,39 @@ function CVRow({
 export default function Resume() {
   return (
     <div>
-      <PageHero
-        title="Curriculum"
-        accent="vitae."
-        lede="The formal version. Real dates, schools and employers go here — this page is the template."
-      />
+      <PageHero title="Curriculum" accent="vitae." lede={CV.lede} />
 
       <SectionStrip left="EDUCATION" />
-      <CVRow
-        span="2024 → NOW"
-        title="M.S. Computer Science — [University]"
-        sub="COURSEWORK: RL · ROBOTICS · MOBILE DEV"
-        right="[GPA]"
-      />
-      <CVRow span="20XX → 2024" title="B.S. — [University]" sub="[MAJOR · HONORS]" right="" last />
+      {CV.education.map((row, i) => (
+        <CVRow
+          key={i}
+          span={row.span}
+          title={row.title}
+          sub={row.sub}
+          right={row.right}
+          last={i === CV.education.length - 1}
+        />
+      ))}
 
       <div style={{ height: 28 }} />
       <SectionStrip left="EXPERIENCE" />
-      <CVRow
-        span="NOW"
-        title="Product Owner / FDE — Deloitte, ConvergeHealth"
-        sub="AGENTIC PLATFORM · HEALTHCARE REVENUE CYCLE"
-        right="[CITY]"
-      />
-      <CVRow span="[DATES]" title="[Role] — [Company]" sub="REPLACE WITH TWO REAL BULLETS, MAX" right="[CITY]" last />
+      {CV.experience.map((row, i) => (
+        <CVRow
+          key={i}
+          span={row.span}
+          title={row.title}
+          sub={row.sub}
+          right={row.right}
+          last={i === CV.experience.length - 1}
+        />
+      ))}
 
       <div style={{ height: 28 }} />
       <SectionStrip left="SKILLS" right="TOOLS I ACTUALLY USE" />
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", padding: "18px 0 40px" }}>
-        <Tag>Python</Tag>
-        <Tag>NumPy</Tag>
-        <Tag>Kotlin</Tag>
-        <Tag>Android</Tag>
-        <Tag>C++</Tag>
-        <Tag>SQL</Tag>
-        <Tag>Git</Tag>
-        <Tag>Claude Code</Tag>
+        {CV.skills.map((skill) => (
+          <Tag key={skill}>{skill}</Tag>
+        ))}
       </div>
 
       <div
@@ -107,7 +105,7 @@ export default function Resume() {
           paddingBottom: 44,
         }}
       >
-        TEMPLATE — BRACKETED FIELDS AWAIT REAL FACTS.
+        {CV.footnote}
       </div>
     </div>
   );

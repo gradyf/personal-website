@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PROJECTS, getProject, nextProject } from "@/lib/data";
+import { PROJECTS, getProject, nextProject } from "@/lib/content";
 import { Specimen } from "@/components/Specimen";
 import { SectionStrip } from "@/components/SectionStrip";
 import { Button } from "@/components/Button";
@@ -23,6 +23,8 @@ const microStyle: CSSProperties = {
   letterSpacing: "2px",
   color: "var(--ink-meta)",
 };
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return PROJECTS.map((p) => ({ id: p.id }));
