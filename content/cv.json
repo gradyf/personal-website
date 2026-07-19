@@ -1,33 +1,55 @@
 {
-  "lede": "The formal version. Real dates, schools and employers go here — this page is the template.",
+  "lede": "The formal version: schools, employers, and dates in ledger order. For what any of it actually produced, see the projects.",
   "education": [
     {
-      "span": "2024 → NOW",
-      "title": "M.S. Computer Science — [University]",
-      "sub": "COURSEWORK: RL · ROBOTICS · MOBILE DEV",
-      "right": "[GPA]"
+      "span": "2025 → NOW",
+      "title": "M.S. Computer Science — Georgia Tech",
+      "sub": "Focus: AI · Game AI · Knowledge-Based AI · ML for Trading",
+      "right": ""
     },
     {
-      "span": "20XX → 2024",
-      "title": "B.S. — [University]",
-      "sub": "[MAJOR · HONORS]",
+      "span": "2024",
+      "title": "Tandon Bridge — NYU",
+      "sub": "CS fundamentals · Certificate of Distinction",
+      "right": ""
+    },
+    {
+      "span": "→ 2018",
+      "title": "B.A. Economics — UNC Chapel Hill",
+      "sub": "Credential in Quantitative Financial Economics",
       "right": ""
     }
   ],
   "experience": [
     {
-      "span": "NOW",
-      "title": "Product Owner / FDE — Deloitte, ConvergeHealth",
-      "sub": "AGENTIC PLATFORM · HEALTHCARE REVENUE CYCLE",
-      "right": "[CITY]"
+      "span": "2025 → NOW",
+      "title": "Product Owner, Agent Foundry — ConvergeHealth by Deloitte",
+      "sub": "Generative AI platform for healthcare providers · agentic workflows in Langflow",
+      "right": "NEW YORK"
     },
     {
-      "span": "[DATES]",
-      "title": "[Role] — [Company]",
-      "sub": "REPLACE WITH TWO REAL BULLETS, MAX",
-      "right": "[CITY]"
+      "span": "2021 → 2025",
+      "title": "Senior Consultant — Deloitte",
+      "sub": "Gen AI use-case lead, life sciences & healthcare · revenue cycle strategy",
+      "right": "NEW YORK"
+    },
+    {
+      "span": "2018 → 2021",
+      "title": "Senior Consultant — Cloudmed",
+      "sub": "Underpaid-claim recovery · T-SQL claim pricing · payer appeals",
+      "right": "ATLANTA"
     }
   ],
-  "skills": ["Python", "NumPy", "Kotlin", "Android", "C++", "SQL", "Git", "Claude Code"],
-  "footnote": "TEMPLATE — BRACKETED FIELDS AWAIT REAL FACTS."
+  "skills": [
+    "Python",
+    "SQL",
+    "C++",
+    "C#",
+    "Java",
+    "NumPy",
+    "LangChain",
+    "LangGraph",
+    "Langflow"
+  ],
+  "footnote": "CURRENT AS OF JULY 2026 — FULL RESUME ON REQUEST."
 }
