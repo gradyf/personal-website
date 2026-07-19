@@ -7,32 +7,32 @@
   "home": {
     "heroTitle": "Projects, concepts &",
     "heroAccent": "other evidence.",
-    "heroLede": "Agents that learn, controllers that settle, small tools for large rabbit holes. Built at work, at school, and after hours with Claude Code.",
+    "heroLede": "Hi there, I'm Gray. This is a place for me to showcase what I've built at school, what I've built at work, what I've built in-between school and work, and what I've built with my new pal Claude. ",
     "heroNotes": [
-      "WORK · SCHOOL · PLAY",
-      "LIGHT ONLY",
-      "BLOG: SOON-ISH"
+      "WORK · SCHOOL · SOMETHING IN BETWEEN",
+      " ",
+      "BLOG: COMING SOON :)"
     ],
     "work": {
       "stripRight": "DELOITTE · CONVERGEHEALTH",
       "body": [
-        "By day I’m a product owner and forward-deployed engineer at Deloitte — ConvergeHealth, the arm that ships software into healthcare revenue cycle. I’m helping build an agentic platform there: AI agents doing real work in a domain where “mostly right” is not a feature. The job is half product judgment, half deployment plumbing — I like both halves."
+        "Currently, I’m a product owner and forward-deployed engineer at Deloitte's ConvergeHealth, the software arm that ships software with a focus on HealthTech. There, I’m helping build an agentic platform: AI agents doing real work in a domain where stability is paramount. The job is half product owner, half solutioning. "
       ],
-      "micro": "AGENTIC PLATFORM · HEALTHCARE REVENUE CYCLE · HUMANS IN THE LOOP"
+      "micro": "AGENTIC PLATFORM · HEALTHCARE REVENUE CYCLE"
     },
     "school": {
       "stripRight": "M.S. COMPUTER SCIENCE",
       "lede": "Coursework that got out of hand — the theory underneath the agents: reward signals, control loops, state and search. Write-ups are public; source stays behind the honor code, shared in limited ways on request."
     },
     "play": {
-      "stripRight": "LIVE — BUILT WITH CLAUDE CODE",
-      "lede": "After-hours SaaS apps, built end-to-end with Claude Code and live in production."
+      "stripRight": "LIVE AND BUILT WITH CLAUDE CODE",
+      "lede": "After-hours SaaS apps, built end-to-end with Claude Code and live in production. Primarily built for fun and to understand the process of launching SaaS apps in 2026. "
     },
-    "blogNote": "The blog opens when there’s something worth reading. Soon-ish."
+    "blogNote": "Blog coming soonish I promise :)"
   },
   "contact": {
     "heroTitle": "Say",
     "heroAccent": "hello.",
-    "heroLede": "One inbox, checked often. Recruiters, collaborators, and people with strong opinions about CD shelving all welcome."
+    "heroLede": "Drop me a line! Recruiters, collaborators, people with strong opinions about who the greatest songwriter of all time is - anyone!"
   }
 }
