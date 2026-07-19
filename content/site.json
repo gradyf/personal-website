@@ -22,7 +22,7 @@
     },
     "school": {
       "stripRight": "M.S. COMPUTER SCIENCE",
-      "lede": "Coursework that got out of hand — the theory underneath the agents: reward signals, control loops, state and search. Write-ups are public; source stays behind the honor code, shared in limited ways on request."
+      "lede": "Learning the theory underpinning computer science and AI in general. This helps me underneath what truly goes into effective agents: reward signals, control loops, state and search. Due to the nature of the OMSCS program and their honor-code, source code has to stay private, but can be be shared and discussed on request."
     },
     "play": {
       "stripRight": "LIVE AND BUILT WITH CLAUDE CODE",
