@@ -2,15 +2,17 @@
   "name": "Gray Forrester",
   "domain": "https://grayforrester.com",
   "email": "hello@grayforrester.com",
-  "github": "",
-  "linkedin": "",
-  "ticker": "GRAY FORRESTER — PORTFOLIO OF IDEAS, PROJECTS & OTHER EVIDENCE — EST. 2026",
+  "ticker": "GRAY FORRESTER - PORTFOLIO OF IDEAS, PROJECTS & OTHER ODDS AND ENDS - EST. 2026",
   "footerLeft": "© 2026 GRAY FORRESTER",
   "home": {
     "heroTitle": "Projects, concepts &",
     "heroAccent": "other evidence.",
     "heroLede": "Agents that learn, controllers that settle, small tools for large rabbit holes. Built at work, at school, and after hours with Claude Code.",
-    "heroNotes": ["WORK · SCHOOL · PLAY", "LIGHT ONLY", "BLOG: SOON-ISH"],
+    "heroNotes": [
+      "WORK · SCHOOL · PLAY",
+      "LIGHT ONLY",
+      "BLOG: SOON-ISH"
+    ],
     "work": {
       "stripRight": "DELOITTE · CONVERGEHEALTH",
       "body": [
