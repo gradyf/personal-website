@@ -1,5 +1,5 @@
 ---
-index: "04"
+index: "02"
 title: "Crate Digging"
 meta: "CD CATALOGING · CLAUDE VISION"
 year: "2026"

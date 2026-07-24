@@ -64,25 +64,6 @@ export default function Home() {
         <div style={{ ...micro, paddingBottom: 26 }}>{home.work.micro}</div>
       </div>
 
-      <SectionStrip left="SCHOOL" right={home.school.stripRight} />
-      <SectionLede>{home.school.lede}</SectionLede>
-      <div style={{ paddingBottom: 34 }}>
-        {SCHOOL_PROJECTS.map((p, i) => (
-          <LedgerRow
-            key={p.id}
-            index={p.index}
-            title={p.title}
-            meta={p.meta}
-            year={p.year}
-            pattern={p.pattern}
-            src={p.src}
-            href={`/projects/${p.id}`}
-            last={i === SCHOOL_PROJECTS.length - 1}
-            riseDelay={nextRise()}
-          />
-        ))}
-      </div>
-
       <SectionStrip left="PLAY" right={home.play.stripRight} />
       <SectionLede>
         {home.play.lede} The write-ups live{" "}
@@ -91,7 +72,7 @@ export default function Home() {
         </HoverLink>
         .
       </SectionLede>
-      <div>
+      <div style={{ paddingBottom: 34 }}>
         {PLAY_PROJECTS.map((p, i) => (
           <LedgerRow
             key={p.id}
@@ -104,6 +85,25 @@ export default function Home() {
             href={p.url || `/projects/${p.id}`}
             external={Boolean(p.url)}
             last={i === PLAY_PROJECTS.length - 1}
+            riseDelay={nextRise()}
+          />
+        ))}
+      </div>
+
+      <SectionStrip left="SCHOOL" right={home.school.stripRight} />
+      <SectionLede>{home.school.lede}</SectionLede>
+      <div>
+        {SCHOOL_PROJECTS.map((p, i) => (
+          <LedgerRow
+            key={p.id}
+            index={p.index}
+            title={p.title}
+            meta={p.meta}
+            year={p.year}
+            pattern={p.pattern}
+            src={p.src}
+            href={`/projects/${p.id}`}
+            last={i === SCHOOL_PROJECTS.length - 1}
             riseDelay={nextRise()}
           />
         ))}

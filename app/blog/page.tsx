@@ -8,14 +8,6 @@ export const metadata: Metadata = {
   description: "The blog opens when there’s something worth reading. Soon-ish.",
 };
 
-const micro: CSSProperties = {
-  fontFamily: "var(--font-mono)",
-  fontSize: 10,
-  fontWeight: "var(--w-meta)" as CSSProperties["fontWeight"],
-  letterSpacing: "2px",
-  color: "var(--ink-meta)",
-};
-
 export default function Blog() {
   return (
     <div>
@@ -24,7 +16,7 @@ export default function Blog() {
         accent="eventually."
         lede="The blog opens when there’s something worth reading. Until then, the projects will have to speak — they’ve been coached."
       />
-      <SectionStrip left="POSTS" right="00 — RESERVED" />
+      <SectionStrip left="POSTS" right="00 SO FAR" />
       <div
         style={{
           margin: "24px 0 16px",
@@ -46,14 +38,14 @@ export default function Blog() {
             lineHeight: 2,
           }}
         >
-          SPACE RESERVED
+          FIRST POST
           <br />
           —
           <br />
-          FIRST POST
+          LAST SUNDAY OF THE MONTH
         </span>
       </div>
-      <div style={{ ...micro, paddingBottom: 44 }}>RSS WILL EXIST. PROMISE.</div>
+      <div style={{ height: 44 }} />
     </div>
   );
 }

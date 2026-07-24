@@ -1,8 +1,8 @@
 ---
-index: "02"
+index: "04"
 title: "PID Control"
 meta: "SIMULATED ROBOTICS · CONTROL LOOPS"
-year: "2025"
+year: "2026"
 pattern: lines
 section: school
 origin: SCHOOL

@@ -23,12 +23,14 @@ function CVRow({
   title,
   sub,
   right,
+  bullets,
   last,
 }: {
   span: string;
   title: string;
   sub?: string;
   right?: string;
+  bullets?: string[];
   last?: boolean;
 }) {
   return (
@@ -49,6 +51,33 @@ function CVRow({
           {title}
         </span>
         {sub ? <span style={{ ...monoMeta, textTransform: "uppercase" }}>{sub}</span> : null}
+        {bullets?.length ? (
+          <ul
+            style={{
+              margin: "8px 0 0",
+              padding: 0,
+              listStyle: "none",
+              display: "flex",
+              flexDirection: "column",
+              gap: 5,
+            }}
+          >
+            {bullets.map((b, k) => (
+              <li
+                key={k}
+                style={{
+                  maxWidth: 560,
+                  fontFamily: "var(--font-text)",
+                  fontSize: 13.5,
+                  lineHeight: 1.6,
+                  color: "var(--ink)",
+                }}
+              >
+                — {b}
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </span>
       <span className="gf-cv-row-right" style={{ ...monoMeta, textAlign: "right" }}>
         {right}
@@ -83,6 +112,7 @@ export default function Resume() {
           title={row.title}
           sub={row.sub}
           right={row.right}
+          bullets={row.bullets}
           last={i === CV.experience.length - 1}
         />
       ))}
@@ -94,6 +124,24 @@ export default function Resume() {
           <Tag key={skill}>{skill}</Tag>
         ))}
       </div>
+
+      {CV.certifications?.length ? (
+        <>
+          <SectionStrip left="CERTIFICATIONS" />
+          <div
+            style={{
+              maxWidth: 640,
+              padding: "16px 0 36px",
+              fontFamily: "var(--font-mono)",
+              fontSize: 12,
+              lineHeight: 2.2,
+              color: "var(--ink)",
+            }}
+          >
+            {CV.certifications.join(" · ")}
+          </div>
+        </>
+      ) : null}
 
       <div
         style={{

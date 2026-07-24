@@ -192,7 +192,7 @@ content:
           - name: title
             type: string
             label: Title
-            description: e.g. "Product Owner / FDE — Deloitte, ConvergeHealth".
+            description: e.g. "Product Owner / FDE — ConvergeHEALTH by Deloitte".
           - name: sub
             type: string
             label: Subtitle
@@ -201,11 +201,21 @@ content:
             type: string
             label: Right-hand label
             description: e.g. city.
+          - name: bullets
+            type: text
+            list: true
+            label: Bullets
+            description: Optional short lines under the subtitle, one per item.
       - name: skills
         type: string
         list: true
         label: Skills
         description: Rendered as tags, in order.
+      - name: certifications
+        type: string
+        list: true
+        label: Certifications
+        description: Joined into one mono line under its own strip.
       - name: footnote
         type: text
         label: Footnote

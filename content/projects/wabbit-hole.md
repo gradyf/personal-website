@@ -1,5 +1,5 @@
 ---
-index: "05"
+index: "01"
 title: "Wabbit Hole"
 meta: "WIKIPEDIA EXPLORER · 2026 STACK"
 year: "2026"

@@ -80,6 +80,7 @@ export type CVRow = {
   title: string;
   sub?: string;
   right?: string;
+  bullets?: string[];
 };
 
 export type CVContent = {
@@ -87,6 +88,7 @@ export type CVContent = {
   education: CVRow[];
   experience: CVRow[];
   skills: string[];
+  certifications?: string[];
   footnote: string;
 };
 

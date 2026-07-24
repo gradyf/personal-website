@@ -84,7 +84,7 @@ export default async function CaseStudy({
       <div style={{ marginTop: 32 }}>
         <Specimen pattern={p.pattern} height={380} label={p.title} index={p.index} src={p.src} />
         <div style={{ marginTop: 8, ...microStyle }}>
-          FIG. {p.index} — {p.src ? "CAPTURED IN THE WILD." : "REAL SCREENSHOT PENDING. THE PATTERN STANDS IN."}
+          FIG. {p.index} — {p.src ? "CAPTURED IN THE WILD." : "SCREENSHOT PENDING."}
         </div>
       </div>
 

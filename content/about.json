@@ -4,8 +4,8 @@
   "heroLede": "Product owner / forward-deployed engineer by day, CS student by night. I like problems with feedback loops: agents, controllers, catalogs, and the occasional rabbit hole.",
   "notes": ["NOW — PO / FDE @ DELOITTE", "ALSO — CS STUDENT", "INTO — RL · ROBOTICS · MUSIC"],
   "paragraphs": [
-    "By day I’m a product owner and forward-deployed engineer at Deloitte — ConvergeHealth’s software development arm — building an agentic platform for healthcare revenue cycle. By night, this site: coursework that got out of hand, and personal tools made with Claude Code that solved a real problem in my apartment (usually the CD shelf).",
-    "I care about work that can be inspected: plots over adjectives, demos over decks. School projects respect the honor code — source available upon request, happily walked through."
+    "By day I’m a product owner and forward-deployed engineer at ConvergeHEALTH by Deloitte, building an agentic platform for healthcare revenue cycle. Concretely: three production agents in Langflow — an orchestrator, account research, and GraphDB query — pulling from Amazon Redshift and Neo4j. By night, this site: coursework that got out of hand, and personal tools made with Claude Code that solved a real problem in my apartment (usually the CD shelf).",
+    "I care about work that can be inspected: plots over adjectives, demos over decks. School projects respect the honor code — source stays private, but I'm happy to walk through the design decisions live."
   ],
   "contactStripRight": "ONE INBOX, CHECKED OFTEN",
   "asideNote": "Recruiters: the CV is one tab over."

@@ -9,7 +9,7 @@
   "home": {
     "heroTitle": "Projects, concepts &",
     "heroAccent": "other evidence.",
-    "heroLede": "Hi there, I'm Gray. This is a place for me to showcase what I've built at school, what I've built at work, what I've built in-between school and work, and what I've built with my new pal Claude. ",
+    "heroLede": "Hi there, I'm Gray. This is a place for me to showcase what I've built at school, what I've built at work, what I've built in-between school and work, and what I've built with my new pal Claude. These days that means production agents in Langflow at ConvergeHEALTH by Deloitte by day, and Georgia Tech's M.S. in computer science (AI focus) by night — a product owner who crossed into engineering.",
     "heroNotes": [
       "WORK · SCHOOL · AND THINGS INBETWEEN",
       "--------------------------------",
@@ -18,7 +18,7 @@
     "work": {
       "stripRight": "DELOITTE · CONVERGEHEALTH",
       "body": [
-        "Currently, I’m a product owner and forward-deployed engineer at Deloitte's ConvergeHealth, the software arm that ships software with a focus on HealthTech. There, I’m helping build an agentic platform: AI agents doing real work in a domain where stability is paramount. The job is half product owner, half solutioning. "
+        "Currently, I’m a product owner and forward-deployed engineer at Deloitte's ConvergeHEALTH, the arm that ships software with a focus on HealthTech. There, I’m helping build an agentic platform: AI agents doing real work in a domain where stability is paramount. The job is half product owner, half solutioning. "
       ],
       "micro": "AGENTIC PLATFORM · HEALTHCARE REVENUE CYCLE"
     },

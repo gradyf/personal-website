@@ -4,7 +4,7 @@
     {
       "span": "2025 → NOW",
       "title": "M.S. Computer Science — Georgia Tech",
-      "sub": "Focus: AI · Game AI · Knowledge-Based AI · ML for Trading",
+      "sub": "Focus: AI · KBAI · ML for Trading · Game AI · Software Dev Process · AI for Robotics",
       "right": ""
     },
     {
@@ -23,20 +23,30 @@
   "experience": [
     {
       "span": "2025 → NOW",
-      "title": "Product Owner, Agent Foundry — ConvergeHealth by Deloitte",
-      "sub": "Generative AI platform for healthcare providers · agentic workflows in Langflow",
-      "right": "NEW YORK"
+      "title": "Product Owner / Forward Deployed Engineer, Agent Foundry — ConvergeHEALTH by Deloitte",
+      "sub": "Generative AI platform for healthcare providers",
+      "right": "NEW YORK",
+      "bullets": [
+        "Designed and built three production agents in Langflow — orchestrator, account research, and GraphDB query — integrated with Amazon Redshift and Neo4j.",
+        "Advised the platform's retrieval paths: structured SQL over Redshift account-intelligence data, graph traversal over Neo4j.",
+        "One of three forward-deployed engineers; product owner for a ~10-engineer offshore team."
+      ]
     },
     {
       "span": "2021 → 2025",
       "title": "Senior Consultant — Deloitte",
-      "sub": "Gen AI use-case lead, life sciences & healthcare · revenue cycle strategy",
-      "right": "NEW YORK"
+      "sub": "Generative AI use-case lead, life sciences & health care",
+      "right": "NEW YORK",
+      "bullets": [
+        "Sourced and built proof-of-concept generative AI use cases across life sciences and health care.",
+        "Helped an engagement team beat its revenue target by $113M (a 3% increase) within 12 months.",
+        "Built the advanced SQL collectability-projection model behind the financial forecasts."
+      ]
     },
     {
       "span": "2018 → 2021",
       "title": "Senior Consultant — Cloudmed",
-      "sub": "Underpaid-claim recovery · T-SQL claim pricing · payer appeals",
+      "sub": "Underpaid-claim recovery · SQL claim pricing · payer appeals",
       "right": "ATLANTA"
     }
   ],
@@ -49,6 +59,12 @@
     "pandas",
     "LangChain Deep Agents framework",
     "Langflow"
+  ],
+  "certifications": [
+    "Rapid Application Development with LLMs (NVIDIA DLI)",
+    "Building LLM Applications with Prompt Engineering (NVIDIA DLI)",
+    "Neo4j Fundamentals",
+    "Cypher Fundamentals"
   ],
   "footnote": "CURRENT AS OF JULY 2026 — FULL RESUME ON REQUEST."
 }
