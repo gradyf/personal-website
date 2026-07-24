@@ -27,8 +27,8 @@ export default function Contact() {
           <span className="gf-biglink">{SITE.email}</span>
         </HoverLink>
         <div style={{ display: "flex", gap: 28, fontFamily: "var(--font-mono)", fontSize: 13 }}>
-          <HoverLink href={SITE.github || "/"}>GitHub ↗</HoverLink>
-          <HoverLink href={SITE.linkedin || "/"}>LinkedIn ↗</HoverLink>
+          {SITE.github ? <HoverLink href={SITE.github}>GitHub ↗</HoverLink> : null}
+          {SITE.linkedin ? <HoverLink href={SITE.linkedin}>LinkedIn ↗</HoverLink> : null}
         </div>
       </div>
     </div>

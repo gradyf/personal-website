@@ -51,12 +51,16 @@ export default function About() {
           <HoverLink href={`mailto:${SITE.email}`} baseColor="var(--text-accent)">
             {SITE.email}
           </HoverLink>
-          <HoverLink href={SITE.github || "/contact"} baseColor="var(--text-accent)">
-            GitHub ↗
-          </HoverLink>
-          <HoverLink href={SITE.linkedin || "/contact"} baseColor="var(--text-accent)">
-            LinkedIn ↗
-          </HoverLink>
+          {SITE.github ? (
+            <HoverLink href={SITE.github} baseColor="var(--text-accent)">
+              GitHub ↗
+            </HoverLink>
+          ) : null}
+          {SITE.linkedin ? (
+            <HoverLink href={SITE.linkedin} baseColor="var(--text-accent)">
+              LinkedIn ↗
+            </HoverLink>
+          ) : null}
         </div>
         <span
           className="gf-split-right"

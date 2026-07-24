@@ -123,10 +123,14 @@ export default function Home() {
           }}
         >
           ELSEWHERE:{" "}
-          <HoverLink href={SITE.github || "/contact"} baseColor="var(--text-accent)" fontSize={12}>
-            GitHub ↗
-          </HoverLink>{" "}
-          ·{" "}
+          {SITE.github ? (
+            <>
+              <HoverLink href={SITE.github} baseColor="var(--text-accent)" fontSize={12}>
+                GitHub ↗
+              </HoverLink>{" "}
+              ·{" "}
+            </>
+          ) : null}
           <HoverLink href={SITE.linkedin || "/contact"} baseColor="var(--text-accent)" fontSize={12}>
             LinkedIn ↗
           </HoverLink>{" "}

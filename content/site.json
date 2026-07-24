@@ -2,6 +2,8 @@
   "name": "Gray Forrester",
   "domain": "https://grayforrester.com",
   "email": "hello@grayforrester.com",
+  "github": "",
+  "linkedin": "https://www.linkedin.com/in/gradyforrester",
   "ticker": "GRAY FORRESTER - PORTFOLIO OF IDEAS, PROJECTS & OTHER ODDS AND ENDS - EST. 2026",
   "footerLeft": "© 2026 GRAY FORRESTER",
   "home": {
@@ -22,7 +24,7 @@
     },
     "school": {
       "stripRight": "M.S. COMPUTER SCIENCE",
-      "lede": "Learning the theory underpinning computer science and AI in general. This helps me underneath what truly goes into effective agents: reward signals, control loops, state and search. Due to the nature of the OMSCS program and their honor-code, source code has to stay private, but can be be shared and discussed on request."
+      "lede": "Learning the theory underpinning computer science and AI in general. This helps me understand what truly goes into effective agents: reward signals, control loops, state and search. Due to the nature of the OMSCS program and their honor-code, source code stays private — but I'm happy to walk through the design decisions live."
     },
     "play": {
       "stripRight": "LIVE AND BUILT WITH CLAUDE CODE",

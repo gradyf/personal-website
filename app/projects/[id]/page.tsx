@@ -149,12 +149,12 @@ export default async function CaseStudy({
               >
                 {p.origin === "SCHOOL" ? (
                   <>
-                    SOURCE — AVAILABLE UPON REQUEST.
+                    SOURCE STAYS PRIVATE UNDER GEORGIA TECH&rsquo;S HONOR CODE —
                     <br />
-                    COURSEWORK FALLS UNDER THE HONOR CODE.
+                    HAPPY TO WALK THROUGH THE DESIGN DECISIONS LIVE.
                   </>
                 ) : (
-                  <>SOURCE — LINK COMING SOON.</>
+                  <>SOURCE — PRIVATE WHILE I SCRUB KEYS.</>
                 )}
               </div>
             )}
