@@ -1,5 +1,5 @@
 ---
-index: "03"
+index: "06"
 title: "Q-Learner"
 meta: "REINFORCEMENT LEARNING · PYTHON"
 year: "2025"

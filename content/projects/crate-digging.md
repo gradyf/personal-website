@@ -13,6 +13,6 @@ facts:
   - "3D RIFFLE CAROUSEL"
   - "LIVE — CRATEDIGGING.IO"
 ---
-A multi-user cataloger for physical CD and record collections. Scan a barcode and the disc files itself through Discogs; snap a cover photo and Claude identifies it — structured vision output, forced tool call, straight into search. Lists, a wishlist, universal search, and an eighteen-article cited genre wiki round out the shelf.
+A multi-user cataloger for physical CD and record collections. Scan a barcode and the disc files itself through Discogs; snap a cover photo and Claude identifies it — identification over retrieval: structured vision output through a forced tool call, LLM-extracted metadata dropped straight into search. Lists, a wishlist, universal search, and an eighteen-article cited genre wiki round out the shelf.
 
 The browsing UI is the fun part: a 3D riffle carousel you flip through like a crate. Built with Claude Code on Next.js 16, Turso, and Clerk; live at cratedigging.io.
